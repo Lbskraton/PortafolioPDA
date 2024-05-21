@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+  <head><script src="assets/js/color-modes.js"></script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.122.0">
+    <title>Pricing example · Bootstrap v5.3</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+
+    <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        width: 100%;
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .btn-bd-primary {
+        --bd-violet-bg: #712cf9;
+        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+        --bs-btn-font-weight: 600;
+        --bs-btn-color: var(--bs-white);
+        --bs-btn-bg: var(--bd-violet-bg);
+        --bs-btn-border-color: var(--bd-violet-bg);
+        --bs-btn-hover-color: var(--bs-white);
+        --bs-btn-hover-bg: #6528e0;
+        --bs-btn-hover-border-color: #6528e0;
+        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+        --bs-btn-active-color: var(--bs-btn-hover-color);
+        --bs-btn-active-bg: #5a23c8;
+        --bs-btn-active-border-color: #5a23c8;
+      }
+
+      .bd-mode-toggle {
+        z-index: 1500;
+      }
+
+      .bd-mode-toggle .dropdown-menu .active .bi {
+        display: block !important;
+      }
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="pricing.css" rel="stylesheet">
+  </head>
+  <body>
+    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+      <symbol id="check2" viewBox="0 0 16 16">
+        <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+      </symbol>
+      <symbol id="circle-half" viewBox="0 0 16 16">
+        <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+      </symbol>
+      <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+        <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+        <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
+      </symbol>
+      <symbol id="sun-fill" viewBox="0 0 16 16">
+        <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+      </symbol>
+    </svg>
+
+
+    <!--
+    <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
+      <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
+              id="bd-theme"
+              type="button"
+              aria-expanded="false"
+              data-bs-toggle="dropdown"
+              aria-label="Toggle theme (auto)">
+        <svg class="bi my-1 theme-icon-active" width="1em" height="1em"><use href="#circle-half"></use></svg>
+        <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+      </button>
+      <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+        <li>
+          <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+            <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#sun-fill"></use></svg>
+            Light
+            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+            <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#moon-stars-fill"></use></svg>
+            Dark
+            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+            <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#circle-half"></use></svg>
+            Auto
+            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+          </button>
+        </li>
+      </ul>
+    </div>
+  -->
+
+    
+<svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+  <symbol id="check" viewBox="0 0 16 16">
+    <title>Check</title>
+    <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+  </symbol>
+</svg>
+
+<div class="container py-3">
+  <header>
+    <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
+        <div class="img-fluid img-thumbnail tump rounded-circle text-center"><a href="https://www.youtube.com/watch?v=GL3DXJE9UJk" target="blank"><img src="img/ico3.png"  alt="..."  width="100%" ></a></div>
+        <span class="fs-4">&nbsp;&nbsp;Club Cans Riqui&ntilde;os </span>
+
+
+      <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
+        <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="#Descripcion">Descripci&oacute;n</a>
+        <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="#Subscripciones">Subscripciones</a>
+        <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="#Detalles">Detalles</a>
+        <a class="py-2 link-body-emphasis text-decoration-none" href="#Enlaces">Enlaces</a>
+      </nav>
+    </div>
+
+    <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+      <h1 class="display-4 fw-normal text-body-emphasis" id="Descripcion">¿Quienes somos?</h1>
+      <p class="fs-5 text-body-secondary">El club de los mejores amigos del hombre m&aacute;s miembros de toda Galicia te da.Con ser miembro del club más guau de galici ya tienes acceso a clases de danza canina, certámenes de agilidad canina, entradas como observador para concursos.</p>
+    </div>
+  </header>
+
+  <main id="Subscripciones">
+    
+<div class="row text-center justify-content-center">
+    <div class=" col-md-4 col-sm-6 text-center ">
+        <div class="card  mb-4 rounded-3 shadow-sm">
+            <div class="card-header py-3">
+                <h4 class="my-0 fw-normal">Free</h4>
+            </div>
+            
+            <div class="card-body">
+              <div class="row">
+                <h1 class="card-title pricing-card-title">0€<small class="text-body-secondary fw-light">/mes</small></h1><br>
+                <div class="container"><img class="timg border border-primary" src="img/jalletas12.jpg" alt="puppy, dog, pet, bowl, dish, food, green, red, brown, mammal, biscuit, dessert, cuisine, material, bone, pets, claws, animals, bones, supplies, treat, dog food, chinese food, dog bones, dog biscuits, dog treat, Free Images In PxHere">
+                </div>
+                <a href="enlace/formFree.html">
+                <button type="button" class="w-100 btn btn-lg btn-primary text-nowrap">Sign up for free</button></a>
+                <div class="listilla">
+                <ul class="list-unstyled mt-3 mb-4">
+                    <li>Descuentos en la tienda online</li>
+                    <li>Gratis mensualmente piensos básicos</li>
+                    <li>Recibe catalogo de ofertas de juguetes</li>
+                    <li>Acceso al forum, reuniones y eventos </li>
+                </ul>
+                </div>
+              </div>
+
+                
+
+            </div>
+        </div>
+    </div>
+    <div class=" col-md-4 col-sm-6 text-center">
+        <div class="card mb-4 rounded-3 shadow-sm">
+            <div class="card-header py-3">
+                <h4 class="my-0 fw-normal">Pro</h4>
+            </div>
+            <div class="card-body timg">
+              <div class="row">
+                <h1 class="card-title pricing-card-title">15€<small class="text-body-secondary fw-light">/mes</small></h1><br>
+                <div class="container"><img class="timg border border-primary" src="img/jalletas22.png" alt="puppy, dog, pet, bowl, dish, food, green, red, brown, mammal, biscuit, dessert, cuisine, material, bone, pets, claws, animals, bones, supplies, treat, dog food, chinese food, dog bones, dog biscuits, dog treat, Free Images In PxHere">
+                </div>
+                <a href="enlace/formPro.html">
+                <button type="button" class="w-100 btn btn-lg btn-primary text-nowrap">Get started</button></a>
+                <div class="listilla">
+                <ul class="list-unstyled mt-3 mb-4">
+                    <li>Acceso tienda exclusiva</li>
+                    <li>Mayor seleccion de piensos específicos</li>
+                    <li>Juguetes de macar gratis cada mes</li>
+                    <li>Suscripción gratuita a revistas tematicas</li>
+                </ul>
+              </div>
+                </div>
+
+                
+
+            </div>
+        </div>
+    </div>
+    </br>
+    <div class=" col-md-4 col-sm-6 text-center">
+        <div class="card mb-4 rounded-3 shadow-sm border-primary">
+            <div class="card-header py-3 text-bg-primary border-primary ">
+                <h4 class="my-0 fw-normal">Deluxe</h4>
+            </div>
+            <div class="card-body ">
+                <div class="row">
+                    <h1 class="card-title pricing-card-title">29€<small class="text-body-secondary fw-light">/mes</small></h1>
+                    <div class="container"><img class="timg border border-primary" src="https://c.pxhere.com/photos/4f/01/dog_bones_puppy_pet_dog_food_food_bowl_pets_animals-964987.jpg!d" srcset="https://c.pxhere.com/photos/4f/01/dog_bones_puppy_pet_dog_food_food_bowl_pets_animals-964987.jpg!d" alt="puppy, dog, pet, bowl, dish, food, green, red, brown, mammal, biscuit, dessert, cuisine, material, bone, pets, claws, animals, bones, supplies, treat, dog food, chinese food, dog bones, dog biscuits, dog treat, Free Images In PxHere">
+                    </div>
+                    <a href="enlace/formDeluxe.html">
+                    <button type="button" class="w-100 btn btn-lg btn-primary text-nowrap">Contact us</button></a>
+                    <div class="listilla">
+                    <ul class="list-unstyled mt-3 mb-4">
+                        <li>Aún más descuentos</li>
+                        <li>Hasta 15 kg de penso al mes por demanda</li>
+                        <li>Participación gratuita en cientos de eventos caninos</li>
+                        <li>Seguro de mascotas completo</li>
+                    </ul>
+                    </div>
+                    </div>
+
+                        
+
+                </div>
+            </div>
+        </div>
+    </div>
+      
+    </div>
+    <div class="row"></div>
+    </br>
+
+
+    <h2 class="display-6 text-center mb-4" id="Detalles">Detalles del tipo de Socio</h2>
+
+    <div class="table-responsive">
+      <table class="table text-center">
+        <thead>
+          <tr>
+            <th style="width: 34%;"></th>
+            <th style="width: 22%;">Free</th>
+            <th style="width: 22%;">Pro</th>
+            <th style="width: 22%;">Deluxe</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row" class="text-start">Carnet Miembro</th>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-start">Carnet Miembro Plus</th>
+            <td></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+          </tr>
+        </tbody>
+
+        <tbody>
+          <tr>
+            <th scope="row" class="text-start">Selección mensual de piensos</th>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-start">Revista Mensual JugandoPeludamente</th>
+            <td></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-start">Muestras juguetes gratis</th>
+            <td></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-start">Seguro Mascotas Completo</th>
+            <td></td>
+            <td></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <footer class="pt-4 my-md-5 pt-md-5 border-top" id="Enlaces">
+    <div class="row">
+      <div class="col-12 col-md">
+        <a href="https://www.youtube.com/watch?v=GL3DXJE9UJk" target="blank"><img src="img/ico3.png"  alt="..."  class="container-fluid rounded-circle text-center tump2" ></a>
+        
+        <small class="d-block mb-3 text-body-secondary">&copy; 2017–2024</small>
+      </div>
+      <div class="col-6 col-md">
+        <h5>Features</h5>
+        <ul class="list-unstyled text-small">
+          <li class="mb-1"><a class="link-info text-decoration-none" href="enlace/carrousel/index.html">Pagina oficial</a></li>
+
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5>Actividades Caninas</h5>
+        <ul class="list-unstyled text-small">
+          <li class="mb-1"><a class="link-info text-decoration-none" href="https://danceswithdogs.com/">Dance with dogs</a></li>
+          <li class="mb-1"><a class="link-info text-decoration-none" href="https://turismovasco.com/pais-vasco/campeonatos-perro-pastor/">Concurso Perros pastores</a></li>
+          <li class="mb-1"><a class="link-info text-decoration-none" href="https://emeralddowns.com/corgi-races-2023/">Carreras Corgis</a></li>
+
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5>Adopción, sanar corazones peludos</h5>
+        <ul class="list-unstyled text-small">
+          <li class="mb-1"><a class="link-info text-decoration-none" href="https://hoxe.vigo.org/movemonos/n_anim_refugio.php?lang=cas">Refugio a Madroa</a></li>
+          <li class="mb-1"><a class="link-info text-decoration-none" href="https://protectoraosbiosbardos.org/">Protectora os Biosbardos</a></li>
+          <li class="mb-1"><a class="link-info text-decoration-none" href="https://acougo.org/">Protectora Acougo</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</div>
+<script src="assets/dist/js/bootstrap.bundle.min.js"></script>
+
+    </body>
+</html>

@@ -1,0 +1,82 @@
+body {
+  background-image: linear-gradient(180deg, var(--bs-secondary-bg), var(--bs-body-bg) 100px, var(--bs-body-bg));
+  cursor: url('img/icocursor2.png'),auto;
+  background-image: url('img/ico3.png');
+
+}
+
+header,footer{
+  padding: 5%;
+  background-color: chocolate;
+}
+
+
+.tump{
+  background-color: aquamarine;
+}
+.tump2{
+  width: 24px;
+  height: 24px;
+  margin-left: 1%;
+  background-color: aquamarine;
+}
+
+.timg
+{
+  min-height: 90%;
+  max-height: 90%;
+  min-width: 100%;
+  max-width: 100%;
+
+}
+
+
+
+.card{
+  min-height: 95%;
+  margin-top: 10%;
+  background-image: url('img/bone2.png');
+
+}
+
+th{
+  border-right: 1px solid white;
+}
+
+.container {
+  max-width: 960px;
+  min-height: 100%;
+
+}
+
+.listilla{
+  background-color: chocolate;
+  margin: 10%;
+  max-width: 80%;
+
+}
+
+.table-responsive{
+  max-width: 80%;
+  margin-left: 10%;
+}
+
+.fondo{
+  
+  print-color-adjust: bottom;
+
+}
+
+.pricing-header {
+  max-width: 700px;
+}
+
+.card-title{
+  background-color: chocolate;
+  margin: 5%;
+  max-width: 90%;
+}
+
+.enlace{
+  color: white;
+}
