@@ -1,0 +1,70 @@
+body{
+
+  background-image: url('https://c.pxhere.com/photos/f6/dd/iphone_6_apple_ios_iphone_ios_8_mobile_phone_cellphone-1333694.jpg!d');
+  background-size: cover;
+  
+
+}
+
+.tcol{
+  background-color: rgba(0,0,0,0.5);
+  padding: 1%;
+}
+
+.titulo{
+  background-color: rgba(0,0,0,0.5);
+  width: 70%;
+  margin-left: 15%;
+  padding: 1%;
+
+}
+
+
+
+
+@media (min-width: 576px) {
+
+  body{
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/b/b0/Spain-Vigo-Playa_del_Vao-P1160864_%2825264766313%29.jpg');
+     /*background-attachment: fixed;
+    background-position-x: center;
+    background-clip: content-box;*/
+
+  }
+
+}
+
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) { 
+  body{
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/7/79/Charco_del_Viento.jpg');
+    
+  }
+ }
+
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) { 
+  body{
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/3/36/Vigo-Museo_del_mar_%288687302785%29.jpg');
+    
+  } 
+}
+
+/* X-Large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+ body{
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/3/34/Barco_desde_Cangas._R%C3%ADa_de_Vigo._Galiza_%28Spain%29-25.jpg');
+    
+  }
+}
+
+/* XX-Large devices (larger desktops, 1400px and up)*/
+@media (min-width: 1400px) { 
+  body{
+    background-image: url('https://live.staticflickr.com/4121/4898825186_7730db71c8_b.jpg');
+    
+  }
+
+
+
+ }

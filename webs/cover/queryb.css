@@ -1,0 +1,75 @@
+body{
+
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/8/88/Neskowin_Beach%2C_near_Proposal_Rock.jpg');
+  background-size: cover;
+
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  
+  
+
+}
+
+.tcol{
+  background-color: rgba(0,0,0,0.5);
+  padding: 1%;
+}
+
+.titulo{
+  background-color: rgba(0,0,0,0.5);
+  width: 70%;
+  margin-left: 15%;
+  padding: 1%;
+
+}
+
+
+
+
+@media (min-width: 576px) {
+
+  body{
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/6a/R%C3%ADa_de_Vigo_-_Lim%C3%A9ns.jpg');
+     /*background-attachment: fixed;
+    background-position-x: center;
+    background-clip: content-box;*/
+
+  }
+
+}
+
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) { 
+  body{
+    background-image: url('https://c.pxhere.com/photos/df/82/photo-59998.jpg!d');
+    
+  }
+ }
+
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) { 
+  body{
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/65/Lexposition_Abysses_au_Museum_%28Paris%29_%282272136582%29.jpg');
+    
+  } 
+}
+
+/* X-Large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+ body{
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/d/dd/Magnapinna.jpg');
+    
+  }
+}
+
+/* XX-Large devices (larger desktops, 1400px and up)*/
+@media (min-width: 1400px) { 
+  body{
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/d/dd/Magnapinna.jpg');
+    
+  }
+
+
+
+ }

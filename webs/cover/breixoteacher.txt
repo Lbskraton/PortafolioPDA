@@ -1,0 +1,53 @@
+<a href="#" class="btn btn-lg btn-light fw-bold border-white bg-white" id="bot" >Learn more</a>
+      <!--<button onclick="fun()"><a href="#" class="btn btn-lg btn-light fw-bold border-white bg-white" >Learn more</a></button>-->
+      <!--<a href="#" class="btn btn-lg btn-light fw-bold border-white bg-white" id="bot2" >No gracias</a>-->
+
+
+<script type="text/javascript">
+  /*document.getElementById("bot").addEventListener("click",fun());*/
+
+  document.addEventListener("DOMContentLoaded", function(){ 
+      document.getElementById("bot").addEventListener("click",(e)=>{
+           document.body.style.backgroundImage = "url('https://upload.wikimedia.org/wikipedia/commons/d/dd/Magnapinna.jpg')";
+      });
+   });
+// no "document.onDOMContentLoaded = ..."
+
+
+  /*
+  function fun() {
+    document.body.style.backgroundImage = "url('https://upload.wikimedia.org/wikipedia/commons/d/dd/Magnapinna.jpg')";
+  }*/
+
+  /*document.getElementById("bot2").addEventListener("click",fun2());
+
+  function fun2() {
+    document.body.style.backgroundImage = "";
+  }*/
+
+</script>
+
+
+
+document.addEventListener("DOMContentLoaded", function(){ 
+      document.getElementById("bot").addEventListener("click",(e)=>{
+           /*document.body.style.backgroundImage = "url('https://upload.wikimedia.org/wikipedia/commons/d/dd/Magnapinna.jpg')";*/
+        var cssarray=(document.getElementById("mimedia").href).split("/");
+        var css=cssarray[cssarray.length-1];
+          console.log(document.getElementById("mimedia"));
+          console.log(css+" soy css");
+          if(css=="query.css"){
+            console.log("arriba");
+              document.getElementById("mimedia").href="queryb.css";
+              document.getElementById("dia").style="display:none";
+              document.getElementById("noche").style="display:block";
+          }else{
+            console.log("abajo");
+              document.getElementById("mimedia").href="query.css";
+              document.getElementById("dia").style="display:block";
+              document.getElementById("noche").style="display:none";
+          }
+
+          
+
+          console.log(document.getElementById("mimedia").href+" soy href");
