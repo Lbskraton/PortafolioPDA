@@ -1,0 +1,29 @@
+@media (min-width: 1200px) { 
+
+.modito{
+
+  min-height: 50em;
+  min-width: 50em;
+}
+  
+ }
+ 
+@media (min-width: 992px) { 
+
+.modito{
+
+  min-height: 30em;
+  min-width: 30em;
+}
+  
+ }
+
+ .cabeza{
+  background-color: chocolate;
+  background-image: url('../assets/img/portfolio/ico3.png');
+
+ }
+
+
+
+
