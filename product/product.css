@@ -1,0 +1,121 @@
+body{
+  cursor: url('img/icocursor2.png'),auto;
+}
+
+.container {
+  max-width: 960px;
+}
+
+.icon-link > .bi {
+  width: .75em;
+  height: .75em;
+}
+
+/*
+ * Custom translucent site header
+ */
+
+.site-header {
+  background-color: rgba(0, 0, 0, .85);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+}
+.site-header a {
+  color: #8e8e8e;
+  transition: color .15s ease-in-out;
+}
+.site-header a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+
+.cabecera{
+  background-color: rgba(255,255,255,0.25) !important;
+
+}
+
+.hover:hover{
+        transition: all .2s ease-in-out;
+        transform: scale(1.1);
+
+}
+
+.txt{
+  padding: 1%;
+}
+
+.tump{
+  background-color: aquamarine;
+  --bs-nav-link-padding-y: 0rem !important;
+  width: 54px;
+  height: 44px;
+}
+
+/*
+ * Dummy devices (replace them with your own or something else entirely!)
+ */
+
+.product-device {
+  position: absolute;
+  right: 10%;
+  bottom: -30%;
+  width: 300px;
+  height: 540px;
+  background-color: #333;
+  border-radius: 21px;
+  transform: rotate(30deg);
+  z-index: -5;
+}
+
+.product-device::before {
+  position: absolute;
+  top: 10%;
+  right: 10px;
+  bottom: 10%;
+  left: 10px;
+  content: "";
+  background-image: url("https://www.vigoalminuto.com/wp-content/uploads/2024/04/IMG-20240404-WA0001.jpg");
+  background-size: cover;
+ 
+  /*background-color: rgba(255, 255, 255, .1);*/
+  border-radius: 5px;
+  z-index: -5;
+}
+
+.product-device-2 {
+  top: -25%;
+  right: auto;
+  bottom: 0;
+  left: 5%;
+  background-color: #e5e5e5;
+  z-index: -5;
+}
+
+.fondea{
+  background-image: linear-gradient(to bottom right,chocolate,chocolate, transparent);
+  
+}
+
+.fondea2{
+  background-image: linear-gradient(to bottom right,goldenrod,goldenrod, transparent);
+
+}
+
+.txt{
+  background-color: rgba(0, 0, 0, 1.0);
+}
+
+
+/*
+ * Extra utilities
+ */
+
+.flex-equal > * {
+  flex: 1;
+}
+@media (min-width: 768px) {
+  .flex-md-equal > * {
+    flex: 1;
+  }
+}
