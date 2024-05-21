@@ -1,0 +1,18 @@
+body{
+
+	background-image: url('https://openclipart.org/image/2000px/229517');
+}
+
+.titgal{
+	background-color: grey;
+	color: white;
+}
+
+
+.timg
+{
+	min-height: 90%;
+	max-height: 90%;
+	min-width: 100%;
+	max-width: 100%;
+}
